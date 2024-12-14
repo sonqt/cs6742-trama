@@ -1,0 +1,16 @@
+% !TEX root = paper-main.tex
+% Logic for inline comments
+\newif\ifshowcomments
+% Switch to \showcommentsfalse to turn off comments!
+% \showcommentsfalse
+\newcommand\todo{\textcolor{red}}
+\newcommand{\st}[1]{{\textcolor{teal}{ST:#1}}}
+\newcommand{\cd}[1]{\textcolor{blue}{CD:#1}}
+
+
+%%editing macros
+\newcommand{\cut}[1]{}
+\newcommand{\xhdr}[1]{\paragraph{#1.}}
+
+%% Terminology macros
+\newcommand{\forecastingmodel}{conversational forecasting model\xspace}
