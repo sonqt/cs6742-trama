@@ -1,0 +1,32 @@
+\section{Introduction}
+The setting of online conversations has become ubiquitous and commonplace. 
+Although this has provided new opportunities for civil discourse, online conversations have also become increasingly associated with negative conversational phenomenon such as toxicity, hate speech, and personal attacks. 
+In particular, seemingly calm beginnings to online discussions can devolve into heated personal attacks. 
+Prior work has termed this phenomenon as conversations gone awry (CGA).
+
+Predicting when conversations will go awry is a natural task to try and automate. 
+Building a model that can effectively predict this phenomenon would be useful in online discussion forums such as Reddit or Wikipedia talk pages. 
+If the model flags a conversation as potentially derailing, then moderators could step in and prevent users from further escalating the conversation. 
+This would help make these online discussion forums a more friendly and welcoming space. 
+
+Recent studies have focused on developing models for the task of forecasting when conversations will go awry. 
+These models use a combination of linguistic markers (e.g., politeness) and unsupervised learning to make early predictions. 
+The difficulty of this task lies in the early prediction aspect - the model is unable to see the actual personal attack before making its prediction. 
+State-of-the-art (SOTA) models are only able to achieve an accuracy of slightly less than 70\% on CGA benchmarks. 
+
+This performance leaves much to be desired. 
+The prior work that developed the models does not carefully examine how the model makes its predictions. 
+Further understanding of the model and its shortcomings would pave the way for future improvements on the CGA task. 
+In particular, this project investigated the model's use of the conversational context in making its predictions. 
+
+We wanted to understand two main research questions.
+\begin{enumerate}
+    \item Is understanding the conversational context essential for SOTA model performance?
+    \item Do SOTA models utilize the conversational context when making forecasts?
+\end{enumerate}
+We hypothesized that conversational context was not actually necessary for the model's performance, and that the model was not utilizing the context when making forecasts. 
+
+This project answers these questions by modifying and creating new contexts for the model to make forecasts with. 
+We could then see how the model's predictions changed as a result of the new context. 
+Ultimately, we found that SOTA models do not need conversational context for their performance, but that they do in fact utilize conversational contexts when making their forecasts. 
+These results suggest that the current CGA benchmark may not be difficult enough, and that a new benchmark is needed to help train and improve model performance. 
