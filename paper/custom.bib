@@ -7,3 +7,72 @@
     publisher = {Cambridge University Press},
     address = {Cambridge, UK}
 }
+
+@article{Cheng_Danescu-Niculescu-Mizil_Leskovec_2021, 
+    title={Antisocial Behavior in Online Discussion Communities}, 
+    volume={9}, 
+    url={https://ojs.aaai.org/index.php/ICWSM/article/view/14583}, 
+    DOI={10.1609/icwsm.v9i1.14583}, 
+    abstractNote={ &lt;p&gt; User contributions in the form of posts, comments, and votes are essential to the success of online communities. However, allowing user participation also invites undesirable behavior such as trolling. In this paper, we characterize antisocial behavior in three large online discussion communities by analyzing users who were banned from these communities. We find that such users tend to concentrate their efforts in a small number of threads, are more likely to post irrelevantly, and are more successful at garnering responses from other users. Studying the evolution of these users from the moment they join a community up to when they get banned, we find that not only do they write worse than other users over time, but they also become increasingly less tolerated by the community. Further, we discover that antisocial behavior is exacerbated when community feedback is overly harsh. Our analysis also reveals distinct groups of users with different levels of antisocial behavior that can change over time. We use these insights to identify antisocial users early on, a task of high practical importance to community maintainers. &lt;/p&gt; }, 
+    number={1}, 
+    journal={Proceedings of the International AAAI Conference on Web and Social Media}, 
+    author={Cheng, Justin and Danescu-Niculescu-Mizil, Cristian and Leskovec, Jure}, 
+    year={2021}, 
+    month={Aug.}, 
+    pages={61-70} 
+}
+
+@inproceedings{zhang-etal-2018-conversations,
+    title = "Conversations Gone Awry: Detecting Early Signs of Conversational Failure",
+    author = "Zhang, Justine  and
+      Chang, Jonathan  and
+      Danescu-Niculescu-Mizil, Cristian  and
+      Dixon, Lucas  and
+      Hua, Yiqing  and
+      Taraborelli, Dario  and
+      Thain, Nithum",
+    editor = "Gurevych, Iryna  and
+      Miyao, Yusuke",
+    booktitle = "Proceedings of the 56th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2018",
+    address = "Melbourne, Australia",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P18-1125",
+    doi = "10.18653/v1/P18-1125",
+    pages = "1350--1361",
+    abstract = "One of the main challenges online social systems face is the prevalence of antisocial behavior, such as harassment and personal attacks. In this work, we introduce the task of predicting from the very start of a conversation whether it will get out of hand. As opposed to detecting undesirable behavior after the fact, this task aims to enable early, actionable prediction at a time when the conversation might still be salvaged. To this end, we develop a framework for capturing pragmatic devices{---}such as politeness strategies and rhetorical prompts{---}used to start a conversation, and analyze their relation to its future trajectory. Applying this framework in a controlled setting, we demonstrate the feasibility of detecting early warning signs of antisocial behavior in online discussions.",
+}
+
+@inproceedings{chang-danescu-niculescu-mizil-2019-trouble,
+    title = "Trouble on the Horizon: Forecasting the Derailment of Online Conversations as they Develop",
+    author = "Chang, Jonathan P.  and
+      Danescu-Niculescu-Mizil, Cristian",
+    editor = "Inui, Kentaro  and
+      Jiang, Jing  and
+      Ng, Vincent  and
+      Wan, Xiaojun",
+    booktitle = "Proceedings of the 2019 Conference on Empirical Methods in Natural Language Processing and the 9th International Joint Conference on Natural Language Processing (EMNLP-IJCNLP)",
+    month = nov,
+    year = "2019",
+    address = "Hong Kong, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/D19-1481",
+    doi = "10.18653/v1/D19-1481",
+    pages = "4743--4754",
+    abstract = "Online discussions often derail into toxic exchanges between participants. Recent efforts mostly focused on detecting antisocial behavior after the fact, by analyzing single comments in isolation. To provide more timely notice to human moderators, a system needs to preemptively detect that a conversation is heading towards derailment before it actually turns toxic. This means modeling derailment as an emerging property of a conversation rather than as an isolated utterance-level event. Forecasting emerging conversational properties, however, poses several inherent modeling challenges. First, since conversations are dynamic, a forecasting model needs to capture the flow of the discussion, rather than properties of individual comments. Second, real conversations have an unknown horizon: they can end or derail at any time; thus a practical forecasting model needs to assess the risk in an online fashion, as the conversation develops. In this work we introduce a conversational forecasting model that learns an unsupervised representation of conversational dynamics and exploits it to predict future derailment as the conversation develops. By applying this model to two new diverse datasets of online conversations with labels for antisocial events, we show that it outperforms state-of-the-art systems at forecasting derailment.",
+}
+
+@article{Yuan_Singh_2023, 
+    title={Conversation Modeling to Predict Derailment}, 
+    volume={17}, 
+    url={https://ojs.aaai.org/index.php/ICWSM/article/view/22200}, 
+    DOI={10.1609/icwsm.v17i1.22200}, 
+    abstractNote={Conversations among online users sometimes derail, i.e., break down into personal attacks. Derailment interferes with the healthy growth of communities in cyberspace. The ability to predict whether an ongoing conversation will derail could provide valuable advance, even real-time, insight to both interlocutors and moderators. Prior approaches predict conversation derailment retrospectively without the ability to forestall the derailment proactively. Some existing works attempt to make dynamic predictions as the conversation develops, but fail to incorporate multisource information, such as conversational structure and distance to derailment. We propose a hierarchical transformer-based framework that combines utterance-level and conversation-level information to capture fine-grained contextual semantics. We propose a domain-adaptive pretraining objective to unite conversational structure information and a multitask learning scheme to leverage the distance from each utterance to derailment. An evaluation of our framework on two conversation derailment datasets shows an improvement in F1 score for the prediction of derailment. These results demonstrate the effectiveness of incorporating multisource information for predicting the derailment of a conversation.}, 
+    number={1}, 
+    journal={Proceedings of the International AAAI Conference on Web and Social Media}, 
+    author={Yuan, Jiaqing and Singh, Munindar P.}, 
+    year={2023}, 
+    month={Jun.}, 
+    pages={926-935} 
+}

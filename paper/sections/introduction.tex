@@ -1,18 +1,18 @@
 \section{Introduction}
 The setting of online conversations has become ubiquitous and commonplace. 
-Although this has provided new opportunities for civil discourse, online conversations have also become increasingly associated with negative conversational phenomenon such as toxicity, hate speech, and personal attacks. 
+Although this has provided new opportunities for civil discourse, online conversations have also become increasingly associated with negative conversational phenomenon such as toxicity, hate speech, and personal attacks~\citep{Cheng_Danescu-Niculescu-Mizil_Leskovec_2021}.
 In particular, seemingly calm beginnings to online discussions can devolve into heated personal attacks. 
-Prior work has termed this phenomenon as conversations gone awry (CGA).
+Prior work has termed this phenomenon as conversations gone awry (CGA)~\citep{zhang-etal-2018-conversations, chang-danescu-niculescu-mizil-2019-trouble}.
 
 Predicting when conversations will go awry is a natural task to try and automate. 
 Building a model that can effectively predict this phenomenon would be useful in online discussion forums such as Reddit or Wikipedia talk pages. 
 If the model flags a conversation as potentially derailing, then moderators could step in and prevent users from further escalating the conversation. 
 This would help make these online discussion forums a more friendly and welcoming space. 
 
-Recent studies have focused on developing models for the task of forecasting when conversations will go awry. 
+Recent studies have focused on developing models for the task of forecasting when conversations will go awry~\citep{zhang-etal-2018-conversations, chang-danescu-niculescu-mizil-2019-trouble, Yuan_Singh_2023}. 
 These models use a combination of linguistic markers (e.g., politeness) and unsupervised learning to make early predictions. 
 The difficulty of this task lies in the early prediction aspect - the model is unable to see the actual personal attack before making its prediction. 
-State-of-the-art (SOTA) models are only able to achieve an accuracy of slightly less than 70\% on CGA benchmarks. 
+State-of-the-art (SOTA) models are only able to achieve an accuracy of slightly less than 70\% on CGA benchmarks~\citep{zhang-etal-2018-conversations, chang-danescu-niculescu-mizil-2019-trouble, Yuan_Singh_2023}. 
 
 This performance leaves much to be desired. 
 The prior work that developed the models does not carefully examine how the model makes its predictions. 
