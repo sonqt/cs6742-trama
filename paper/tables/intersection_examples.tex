@@ -1,0 +1,63 @@
+% \begin{table}
+% \renewcommand{\arraystretch}{1.0}
+%     \begin{tabularx}{\linewidth}{|p{4.5cm}|X|}
+%         \hline
+%         \multicolumn{1}{|c|}{ \textbf{Conversation} } & \multicolumn{1}{c|}{ \textbf{\textit{Labels \&}} }\\
+%         & \multicolumn{1}{c|}{ \textit{\textbf{Forecasts}} }\\
+%         \hline
+%         \textbf{\textit{(1) User1:}} There have been 45 consecutive male presidents and 0 female ones. This gender ratio is extremely imbalanced, [...]
+
+%         \textbf{\textit{(2) User2:}} Women have had the right to vote for many decades and yet they all voted men into office. 
+%         & Label: \textcolor{red}{Awry}
+        
+%         Normal: \textcolor{red}{Awry}
+        
+%         No-context: \textcolor{teal}{Calm}\\
+        
+%         \hline
+%         \textbf{\textit{(1) User1:}} It highly depends on what your religious beliefs are. Muslim? You better not indocrinate your kids.  [...]
+
+%         \textbf{\textit{(2) User2:}}So your argument is based on open Islamophobia?   [...]
+%         & Label: \textcolor{teal}{Calm}
+        
+%         Normal: \textcolor{teal}{Calm}
+        
+%         No-context: \textcolor{red}{Awry}\\
+%         \hline
+        
+%     \end{tabularx}
+
+% \caption{Examples of conversations where RoBERTa models require the context of current utterances to accurately predict derailment.}
+% \label{tab:intersection-example}
+% \end{table}
+
+\begin{table}[ht]
+    \renewcommand{\arraystretch}{1.0}
+        \begin{tabularx}{\linewidth}{|X|}
+            \hline
+            \textbf{\textit{(1) User1:}} There have been 45 consecutive male presidents and 0 female ones. This gender ratio is extremely imbalanced, and I suggest it's not merely random chance that it's that way.
+    
+            \textbf{\textit{(2) User2:}} Women have had the right to vote for many decades and yet they all voted men into office. 
+            \\
+            \multicolumn{1}{|c|}{Label: \textcolor{red}{Awry}} \\
+            \multicolumn{1}{|c|}{Normal: \textcolor{red}{Awry}\quad        
+            No-context: \textcolor{teal}{Calm}}\\
+            
+            \hline
+    
+           \textbf{\textit{(1) User1:}} It highly depends on what your religious beliefs are. Muslim? You better not indocrinate your kids.  [...]
+           \\
+            \textbf{\textit{(2) User2:}}So your argument is based on open Islamophobia?   [...]
+            \\
+            \multicolumn{1}{|c|}{Label: \textcolor{teal}{Calm}}
+            \\ \multicolumn{1}{|c|}{Normal: \textcolor{teal}{Calm}\quad
+            No-context: \textcolor{red}{Awry}}
+            \\
+            
+            \hline
+    
+        \end{tabularx}
+    
+    \caption{Examples of conversations where RoBERTa models require the context of current utterances to accurately predict derailment.}
+    \label{tab:intersection-example}
+    \end{table}
