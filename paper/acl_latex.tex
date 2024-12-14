@@ -109,6 +109,14 @@ These instructions should be used both for papers submitted for review and for f
 
 \section*{Acknowledgments}
 
+You can use the command \verb|\citet| (cite in text) to get ``author (year)'' citations, like this citation to a paper by \citet{Gusfield:97}.
+You can use the command \verb|\citep| (cite in parentheses) to get ``(author, year)'' citations \citep{Gusfield:97}.
+You can use the command \verb|\citealp| (alternative cite without parentheses) to get ``author, year'' citations, which is useful for using citations within parentheses (e.g. \citealp{Gusfield:97}).
+
+A possessive citation can be made with the command \verb|\citeposs|.
+This is not a standard natbib command, so it is generally not compatible
+with other style files.
+
 This document has been adapted
 by Steven Bethard, Ryan Cotterell and Rui Yan
 from the instructions for earlier ACL and NAACL proceedings, including those for
@@ -134,10 +142,5 @@ Additional elements were taken from the formatting instructions of the \emph{Int
 \bibliography{custom}
 
 \appendix
-
-\section{Example Appendix}
-\label{sec:appendix}
-
-This is an appendix.
 
 \end{document}
