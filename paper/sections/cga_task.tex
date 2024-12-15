@@ -1,0 +1,19 @@
+\section{Task Formulation}
+In a simple scenario, the CGA forecasting task can be formulated as a classification problem, mathematically expressed as:
+\begin{equation}
+p_{\mathrm{derailment}} = f(\mathrm{context})
+\label{eq:classification}
+\end{equation}
+where $f$ is a classification model, \emph{context} represents a static snapshot of the conversation at a specific point in time, and $p_{\mathrm{derailment}}$ is the predicted probability of derailment as output by $f$.
+
+In real-world applications, however, derailment forecasting must occur dynamically, following each utterance in an ongoing conversation. This introduces additional complexities, requiring a temporal dimension to Equation \ref{eq:classification}:
+\begin{equation}
+p_{\mathrm{event}}(t) = f(\mathrm{context}(t))
+\label{eq:forecastingmodel}
+\end{equation}
+
+In this formulation, the CGA model produces \emph{multiple} utterance-level forecasts throughout the lifetime of a conversation. However, each conversation is associated with a single ground-truth label, making it unsuitable to treat each forecast as an independent prediction. This necessitates adjustments to both the prediction process and the evaluation methodology.
+
+Under the static classification framework (Equation \ref{eq:classification}), a single prediction corresponds to a specific timestamp in the conversation, referred to as the \textbf{utterance-level} prediction. In contrast, dynamic forecasting requires \emph{aggregating} multiple utterance-level predictions over the course of a conversation to generate a single prediction that can be compared with the ground-truth label.
+
+In this work, we adopt an evaluation approach informed by previous research. Specifically, a conversation is forecasted to derail if any utterance-level prediction exceeds a threshold determined on the development set. This thresholding mechanism aggregates predictions across utterances, producing the final \textbf{conversation-level} forecast. The highest utterance-level forecast for a conversation is used as the conversation-level prediction for evaluation purposes.
