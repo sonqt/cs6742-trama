@@ -8,9 +8,9 @@ To evaluate whether the models can meaningfully capture the dynamics between con
 %
 Instead of providing the entire conversation context to the model, we feed only the most recent utterance at each timestamp of the conversation. 
 %
-Formally, in the normal setting, the probability of an event is modeled as $p_{\text{event}} = f(\text{context}(t))$, where $\text{context}(t)$ represents the full history of the conversation up to timestamp $t$. 
+Formally, in the normal setting, the probability of an event is modeled as $p_{\text{derailment}} = f(\text{context}(t))$, where $\text{context}(t)$ represents the full history of the conversation up to timestamp $t$. 
 %
-In contrast, under the No-Context setting, the probability is modeled as $$p_{\text{event}} = f(\text{utterance}(t))$$, where $\text{utterance}(t)$ is the most recent utterance at timestamp $t$. 
+In contrast, under the No-Context setting, the probability is modeled as $$p_{\text{derailment}} = f(\text{utterance}(t))$$, where $\text{utterance}(t)$ is the most recent utterance at timestamp $t$. 
 
 \input{tables/intersection_examples}
 
