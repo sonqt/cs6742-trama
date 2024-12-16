@@ -12,7 +12,7 @@ This would help make these online discussion forums a more friendly and welcomin
 Recent studies have focused on developing models for the task of forecasting when conversations will go awry~\citep{zhang-etal-2018-conversations, chang-danescu-niculescu-mizil-2019-trouble, Yuan_Singh_2023}. 
 These models use a combination of linguistic markers (e.g., politeness) and unsupervised learning to make early predictions. 
 The difficulty of this task lies in the early prediction aspect - the model is unable to see the actual personal attack before making its prediction. 
-State-of-the-art (SOTA) models are only able to achieve an accuracy of slightly less than 70\% on CGA benchmarks~\citep{zhang-etal-2018-conversations, chang-danescu-niculescu-mizil-2019-trouble, Yuan_Singh_2023}. 
+State-of-the-art (SOTA) models are only able to achieve an accuracy of slightly less than 70\% on CGA benchmarks~\citep{zhang-etal-2018-conversations, chang-danescu-niculescu-mizil-2019-trouble, Yuan_Singh_2023}. In this project, we analyze the behavior of 10 RoBERTa models (with random initialization), which represent the SOTA for CGA tasks.
 
 This performance leaves much to be desired. 
 The prior work that developed the models does not carefully examine how the model makes its predictions. 
@@ -24,7 +24,7 @@ We wanted to understand two main research questions.
     \item Is understanding the conversational context essential for SOTA model performance?
     \item Do SOTA models utilize the conversational context when making forecasts?
 \end{enumerate}
-We hypothesized that conversational context was not actually necessary for the model's performance, and that the model was not utilizing the context when making forecasts. 
+We hypothesized that conversational context is not actually necessary for the model's performance, and that the model is not utilizing the context when making forecasts. 
 
 This project answers these questions by modifying and creating new contexts for the model to make forecasts with. 
 We could then see how the model's predictions changed as a result of the new context. 

@@ -1,0 +1,29 @@
+\begin{table}[ht]
+    \renewcommand{\arraystretch}{1.0}
+        \begin{tabularx}{\linewidth}{|X|}
+            \hline
+            \textbf{\textit{(1) User1:}} I don't think it's reasonable to say someone can live in a safe neighborhood and feed themselves on a \$20k/year salary. [...]
+    
+            \textbf{\textit{(2) User2:}} I make just over 20k/yr and live comfortably. [...]
+            
+            \textbf{\textit{(2) User3:}} No you don't lol.
+            \\
+            \multicolumn{1}{|c|}{Label: \textcolor{red}{Awry}\quad        
+            Normal Pred: \textcolor{red}{Awry}}\\
+            
+            \hline
+    
+           \textbf{\textit{(1) ChatGPT:}} Is it really possible to live comfortably on a \$20k per year salary?
+           \\
+            \textbf{\textit{(2) User3:}}No you don't lol.
+            \\ \multicolumn{1}{|c|}{Label: \textcolor{teal}{Calm}\quad
+            Normal Pred: \textcolor{red}{Awry}}
+            \\
+            
+            \hline
+    
+        \end{tabularx}
+    
+    \caption{Examples of conversations where RoBERTa models require the context of current utterances to accurately predict derailment.}
+    \label{tab:trama-example}
+    \end{table}
