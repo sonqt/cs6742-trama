@@ -25,9 +25,9 @@ from convokit import Forecaster, download, Corpus, Utterance, Conversation, Spea
 def load_trama(corpus_name):
     corpus = Corpus(utterances=[])
     speaker = Speaker()
-    with open('{}.json'.format(corpus_name), 'r') as file:
+    with open('data/{}.json'.format(corpus_name), 'r') as file:
         data = json.load(file)
-    with open('chatgpt_{}.txt'.format(corpus_name), 'r') as file:
+    with open('data/chatgpt_{}.txt'.format(corpus_name), 'r') as file:
         all_lines = file.readlines()
     prompts = {}
     for line in all_lines:
@@ -43,7 +43,7 @@ def load_trama(corpus_name):
                                 speaker=speaker,
                                 conversation_id=conv_id,
                                 reply_to=None,
-                                text=prompts[conv_id],
+                                text="Thank you so much. I really appreciate your help.",
                                 timestamp=0,
                                 )
             reply_utterance = Utterance(id=utt_id,
