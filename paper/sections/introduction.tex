@@ -24,9 +24,13 @@ We wanted to understand two main research questions.
     \item Is understanding the conversational context essential for SOTA model performance?
     \item Do SOTA models utilize the conversational context when making forecasts?
 \end{enumerate}
-We hypothesized that conversational context is not actually necessary for the model's performance, and that the model is not utilizing the context when making forecasts. 
-
 This project answers these questions by modifying and creating new contexts for the models to make forecasts with. 
 We could then see how the models' predictions changed as a result of the new context. 
-Ultimately, we found that SOTA models do not need conversational context for their performance, but that they do in fact utilize conversational contexts when making their forecasts. 
+
+We hypothesized that conversational context is not actually necessary for the models' performance. 
+By testing this hypothesis in a no-context setting, we find that SOTA models do not need conversational context for their performance.
+From this result, we further hypothesized that the models are not actually utilizing the context when making forecasts. 
+To that end, we design the \textbf{Tra}jectory \textbf{Ma}tters (TraMa) behavioral test.
+This test creates an artificial context that would lead to a calm conversation, even when the targeted utterance is highly escalatory.
+Surprisingly, we find that SOTA models do in fact utilize conversational contexts when making forecasts. 
 These results suggest that the current CGA benchmark may not be difficult enough, and that a new benchmark is needed to help train and improve model performance. 
