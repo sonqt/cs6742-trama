@@ -44,7 +44,17 @@ Table~\ref{tab:trama-example} presents a pair of samples from our TraMa test. In
 
 Using the TraMa test, we can validate our hypothesis that the model, when encountering highly escalatory utterances, may largely overlook the broader conversational context. This can be assessed by measuring the difference in the probability of derailment between the real sample and the ChatGPT-generated TraMa sample, as demonstrated by the two samples in Table~\ref{tab:trama-example}. 
 
-Figure~\ref{fig:trama-results} presents the results of our analysis using the TraMa behavioral test. The findings suggest that while context influences CGA model predictions on CMV, its impact is minimal when the utterance belongs to the Strong awry set. Notably, all 10 RoBERTa models consistently predict such samples as going awry. This is evident in Figure~\ref{fig:trama-results}, where the samples from the Strong set are densely clustered around the $(0, 0)$ point. These observations strongly support our initial hypothesis.
+Figure~\ref{fig:trama-results} presents the results of our analysis using the TraMa behavioral test. 
+The plot compares the change in RoBERTa model forecast probabilities in the no-context setting and the TraMa setting for the Strong and Weak awry sets.
+The findings suggest that while context influences CGA model predictions on CMV, its impact is less when the utterance belongs to the Strong awry set. 
+Notably, all 10 RoBERTa models consistently predict such samples as going awry. 
+This is evident in Figure~\ref{fig:trama-results}, where the samples from the Strong set are densely clustered around the $(0, 0)$ point. 
+
+Additionally, the points tend to be below the $y=x$ line, suggesting that the TraMa setting resulted in a greater decrease in forecast probabilities compared to the no-context setting. 
+To test the statistical significance of these results, a paired t-test was run to compare whether the change in forecast probabilities between the TraMa and no-context settings was significantly different.
+The p-values for the Weak set, Strong set, and combining both sets were all strongly significant ($p < 0.0001$). 
+This suggests that the models do in fact utilize conversational context to some degree when making forecasts. 
+Combined, these results indicate that SOTA models do utilize conversational context when making forecasts, but the impact of context is less pronounced when the utterance is highly escalatory.
 
 \begin{figure}[ht]
     \centering
