@@ -71,3 +71,20 @@ To test the statistical significance of these results, a paired t-test was run.
 The p-values for the Weak set, Strong set, and combining both sets were all strongly significant ($p < 0.0001$). 
 This suggests that the models do in fact utilize conversational context to some degree when making forecasts. 
 Combined, these results indicate that SOTA models do utilize conversational context when making forecasts, but the impact of context is less pronounced when the utterance is highly escalatory.
+
+\subsection{Baseline Comparison}
+To provide a baseline for comparison, we also conduct the TraMa test on a nonsense context.
+Rather than using ChatGPT to generate the preceding context, we use the following fixed context as the preceding utterance: 
+
+{\ttfamily
+\begin{align*}
+& \text{Thank you so much. I really}\\
+& \text{appreciate your help.}\\
+\end{align*}
+}
+
+We measure the change in RoBERTa model forecast probabilities between the normal setting and the nonsense context sample.
+We then compare this change with the change observed in the TraMa setting. 
+A paired t-test was run to test the statistical significance of the results.
+We find that the decrease in forecast probabilities due to TraMa context is significantly greater than the decrease due to the nonsense context ($p < 0.0001$).
+This suggests that the TraMa context is more effective at altering the forecast probabilities than a nonsense context, further supporting our finding that the model utilizes conversational context when making utterance-level forecasts.
