@@ -1,6 +1,6 @@
 \section{TraMa Test}
 
-\subsection{Experimental Setup}
+\xhdr{Experimental Setup}
 In the previous experiments, we observe that while the absence of conversational context significantly affects the utterance-level forecasts of the RoBERTa model, it has minimal impact on the conversation-level forecasts. 
 We thus hypothesize that when the model encounters highly escalatory utterances - such as impolite confrontations or loaded language - it may largely disregard the broader conversational context.
 
@@ -48,7 +48,7 @@ However, when we replace User2's response with a calm, opinion-seeking utterance
 
 \input{tables/trama_examples}
 
-\subsection{Results}
+\xhdr{Results}
 
 \begin{figure}[t]
     \centering
@@ -72,7 +72,7 @@ The p-values for the Weak set, Strong set, and combining both sets were all stro
 This suggests that the models do in fact utilize conversational context to some degree when making forecasts. 
 Combined, these results indicate that SOTA models do utilize conversational context when making forecasts, but the impact of context is less pronounced when the utterance is highly escalatory.
 
-\subsection{Baseline Comparison}
+\xhdr{Baseline Comparison}
 To provide a baseline for comparison, we also conduct the TraMa test on a nonsense context.
 Rather than using ChatGPT to generate the preceding context, we use the following fixed context as the preceding utterance: 
 
@@ -88,3 +88,22 @@ We then compare this change with the change observed in the TraMa setting.
 A paired t-test was run to test the statistical significance of the results.
 We find that the decrease in forecast probabilities due to TraMa context is significantly greater than the decrease due to the nonsense context ($p < 0.0001$).
 This suggests that the TraMa context is more effective at altering the forecast probabilities than a nonsense context, further supporting our finding that the model utilizes conversational context when making utterance-level forecasts.
+
+\xhdr{Human Annotation Task}
+%
+To understand whether or not humans use the conversational context to make forecasts, 
+we conducted a human annotation task. 
+%
+In this task, the participants were shown 20 single utterances from different 
+conversations, 10 of which are awry and the other 10 of which are calm. 
+%
+Then, they are asked to predict whether each single utterance is awry 
+or not, without having access to the prior context.
+%
+This task was performed by all of our group members, as well as two other students 
+in the class, totaling 5 participants. 
+%
+In this setting, we find that the average accuracy of all the participants is 80\%. 
+%
+Thus, our results indicate that humans can also achieve relatively impressive 
+performance on this task without using the conversational context.
