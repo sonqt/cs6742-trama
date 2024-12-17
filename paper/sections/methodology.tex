@@ -36,16 +36,18 @@ Surprisingly, our experiments demonstrate that the performance of RoBERTa remain
 %
 This suggests that conversational context may not significantly impact the SOTA performance of RoBERTa on CGA tasks.
 %
-Moreover, as shown in Figure~\ref{fig:convo_level_changes}, most conversation-level forecast probabilities (defined as the highest utterance-level forecast in each conversation) remain largely unchanged even with the absence of the conversational context in the No-Context setting.
-\begin{figure}[ht]
+Moreover, as shown in Figure~\ref{fig:convo_level_changes}, most conversation-level forecast probabilities (defined as the highest utterance-level forecast in each conversation) remain largely unchanged even with the absence of the conversational context.
+
+\begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{figures/convo_level_changes.png}
     \caption{
         Changes in RoBERTa model conversation-level forecast probabilities due to the absence of conversational context (No-Context Setting).}
     \label{fig:convo_level_changes}
 \end{figure}
+
 \xhdr{RQ2. SOTA models do leverage context when making forecasts}
-However, finding in previous analysis does not suggest that RoBERTa models primarily disregard conversational context when predicting conversation outcomes. 
+However, the previous analysis does not necessarily imply that RoBERTa models primarily disregard conversational context when predicting conversation outcomes. 
 %
 To further explore this, we analyze the model's predictions at the utterance level. 
 %
@@ -53,7 +55,7 @@ Specifically, to determine whether the models utilize context in their predictio
 %
 Our analysis, presented in Figure~\ref{fig:utt_level_changes}, reveals that the absence of context significantly impacts the forecasts of RoBERTa models at the utterance level.
 
-\begin{figure}[ht]
+\begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{figures/utt_level_changes.png}
     \caption{Most significant changes in RoBERTa model utterance-level forecast probabilities within each conversation due to the absence of conversational context (No-Context Setting).}
